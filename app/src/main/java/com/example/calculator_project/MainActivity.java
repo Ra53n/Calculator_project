@@ -3,6 +3,7 @@ package com.example.calculator_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_8).setOnClickListener(this);
         findViewById(R.id.button_9).setOnClickListener(this);
         findViewById(R.id.button_0).setOnClickListener(this);
+        findViewById(R.id.button_ac).setOnClickListener(v -> {
+            TextView textView = findViewById(R.id.text_view);
+            String str = (String) textView.getText();
+            textView.setText(str.substring(0, str.length() - 1));
+        });
 
     }
 
@@ -34,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         TextView textView = findViewById(R.id.text_view);
         Button button = (Button) v;
-        if(textView.getText().length() == 11){
-            Toast.makeText(MainActivity.this,"Слишком длинное число",Toast.LENGTH_SHORT).show();
+        if (textView.getText().length() == 11) {
+            Toast.makeText(MainActivity.this, "Слишком длинное число", Toast.LENGTH_SHORT).show();
             return;
         }
         String s = (String) textView.getText() + button.getText();
