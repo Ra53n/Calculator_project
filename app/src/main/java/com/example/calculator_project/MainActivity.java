@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private CalculatorData data = new CalculatorData("");
     private final String DATA_KEY = "data_key";
@@ -34,7 +37,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_7).setOnClickListener(this);
         findViewById(R.id.button_8).setOnClickListener(this);
         findViewById(R.id.button_9).setOnClickListener(this);
-        findViewById(R.id.button_0).setOnClickListener(this);
+        findViewById(R.id.button_0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textView = findViewById(R.id.text_view);
+                String str = (String) textView.getText();
+                String zero = (String) ((Button) v).getText();
+                if(str.contains(zero) && str.length() == 1){
+                    return;
+                } else{
+                    textView.setText(textView.getText() + zero);
+                }
+            }
+        });
         findViewById(R.id.button_ac).setOnClickListener(v -> {
             TextView textView = findViewById(R.id.text_view);
             String str = (String) textView.getText();
@@ -55,6 +70,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra(SecondActivity.DATA_EXTRA_KEY,data);
             startActivity(intent);
         });
+        findViewById(R.id.button_dot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textView = findViewById(R.id.text_view);
+                String str = (String) textView.getText();
+                String dot = (String) ((Button) v).getText();
+                if(textView.getText().length() == 0){
+                    textView.setText("0" + dot);
+                    return;
+                }
+                if(!str.contains(dot)){
+                    textView.setText(textView.getText() + dot);
+                    return;
+                }
+
+            }
+        });
 
     }
 
@@ -70,6 +102,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = (Button) v;
         if (textView.getText().length() == 11) {
             Toast.makeText(MainActivity.this, "Слишком длинное число", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(textView.getText().length() == 1 && textView.getText().charAt(0) == ((Button)findViewById(R.id.button_0)).getText().charAt(0)){
+            textView.setText(button.getText());
             return;
         }
         String s = (String) textView.getText() + button.getText();
