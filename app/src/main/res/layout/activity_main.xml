@@ -362,5 +362,20 @@
         app:layout_constraintStart_toEndOf="@id/button_0"
         app:layout_constraintTop_toBottomOf="@id/button_3" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_zoom"
+        android:layout_width="135sp"
+        android:layout_height="40sp"
+        android:background="@drawable/square_button"
+        android:backgroundTint="@color/black"
+        android:text="ZOOM"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.calculator_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 data.setData("");
                 return true;
             }
+        });
+        findViewById(R.id.button_zoom).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SecondActivity.class);
+            intent.putExtra(SecondActivity.DATA_EXTRA_KEY,data);
+            startActivity(intent);
         });
 
     }
