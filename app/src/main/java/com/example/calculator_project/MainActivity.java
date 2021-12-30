@@ -5,14 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private CalculatorData data = new CalculatorData("");
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.text_view);
+                TextView textView = findViewById(R.id.output_result_text_view);
                 String str = (String) textView.getText();
                 String zero = (String) ((Button) v).getText();
                 if(str.contains(zero) && str.length() == 1){
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         findViewById(R.id.button_ac).setOnClickListener(v -> {
-            TextView textView = findViewById(R.id.text_view);
+            TextView textView = findViewById(R.id.output_result_text_view);
             String str = (String) textView.getText();
             textView.setText(str.substring(0, str.length() - 1));
             data.setData(str.substring(0, str.length() - 1));
@@ -59,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_ac).setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                TextView textView = findViewById(R.id.text_view);
+                TextView textView = findViewById(R.id.output_result_text_view);
                 textView.setText("");
                 data.setData("");
                 return true;
@@ -73,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_dot).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = findViewById(R.id.text_view);
+                TextView textView = findViewById(R.id.output_result_text_view);
                 String str = (String) textView.getText();
                 String dot = (String) ((Button) v).getText();
                 if(textView.getText().length() == 0){
@@ -98,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        TextView textView = findViewById(R.id.text_view);
+        TextView textView = findViewById(R.id.output_result_text_view);
         Button button = (Button) v;
         if (textView.getText().length() == 11) {
             Toast.makeText(MainActivity.this, "Слишком длинное число", Toast.LENGTH_SHORT).show();
