@@ -5,14 +5,33 @@
     <dimen name="textview_layout_margin">40sp</dimen>
     <dimen name="textview_vertical_bias">1.4</dimen>
 
-    <dimen name="button_vertical_bias">0.9</dimen>
+    <dimen name="button_vertical_bias">0.95</dimen>
     <dimen name="button_zoom_layout_width">135sp</dimen>
-    <dimen name="button_zoom_layout_height">wrap_content</dimen>
-    <dimen name="button_zoom_text_size">30sp</dimen>
+    <dimen name="button_zoom_layout_height">50sp</dimen>
+    <dimen name="button_zoom_text_size">28sp</dimen>
     <dimen name="button_zoom_horizontal_bias">0.91</dimen>
 
     <dimen name="calc_button_layout_width">90sp</dimen>
     <dimen name="calc_button_layout_height">80sp</dimen>
     <dimen name="calc_button_layout_margin">4dp</dimen>
     <dimen name="calc_button_text_size">40sp</dimen>
+
+    <dimen name="landscape_textview_text_size">50sp</dimen>
+    <dimen name="landscape_textview_layout_height">65sp</dimen>
+    <dimen name="landscape_textview_layout_width">260sp</dimen>
+    <dimen name="landscape_textview_layout_margin">22sp</dimen>
+    <dimen name="landscape_textview_vertical_bias">1.4</dimen>
+
+    <dimen name="landscape_button_vertical_bias">0.93</dimen>
+    <dimen name="landscape_button_zoom_layout_width">135sp</dimen>
+    <dimen name="landscape_button_zoom_layout_height">40sp</dimen>
+    <dimen name="landscape_button_zoom_text_size">18sp</dimen>
+    <dimen name="landscape_button_zoom_horizontal_bias">0.64</dimen>
+
+    <dimen name="landscape_calc_button_layout_width">75sp</dimen>
+    <dimen name="landscape_calc_button_layout_height">40sp</dimen>
+    <dimen name="landscape_calc_button_layout_margin">4dp</dimen>
+    <dimen name="landscape_calc_button_text_size">16sp</dimen>
+
+    <dimen name="second_activity_text_view_text_size">64sp</dimen>
 </resources>

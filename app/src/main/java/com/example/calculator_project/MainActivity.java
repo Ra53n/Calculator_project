@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (savedInstanceState != null && savedInstanceState.containsKey(DATA_KEY)) {
             data.setData(savedInstanceState.getString(DATA_KEY));
+            ((TextView) findViewById(R.id.output_result_text_view)).setText(data.getData());
         }
 
         findViewById(R.id.button_1).setOnClickListener(this);
@@ -39,9 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 TextView textView = findViewById(R.id.output_result_text_view);
                 String str = (String) textView.getText();
                 String zero = (String) ((Button) v).getText();
-                if(str.contains(zero) && str.length() == 1){
+                if (str.contains(zero) && str.length() == 1) {
                     return;
-                } else{
+                } else {
                     textView.setText(textView.getText() + zero);
                 }
             }
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         findViewById(R.id.button_zoom).setOnClickListener(v -> {
             Intent intent = new Intent(this, SecondActivity.class);
-            intent.putExtra(SecondActivity.DATA_EXTRA_KEY,data);
+            intent.putExtra(SecondActivity.DATA_EXTRA_KEY, data);
             startActivity(intent);
         });
         findViewById(R.id.button_dot).setOnClickListener(new View.OnClickListener() {
@@ -72,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 TextView textView = findViewById(R.id.output_result_text_view);
                 String str = (String) textView.getText();
                 String dot = (String) ((Button) v).getText();
-                if(textView.getText().length() == 0){
+                if (textView.getText().length() == 0) {
                     textView.setText("0" + dot);
                     return;
                 }
-                if(!str.contains(dot)){
+                if (!str.contains(dot)) {
                     textView.setText(textView.getText() + dot);
                     return;
                 }
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(MainActivity.this, "Слишком длинное число", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(textView.getText().length() == 1 && textView.getText().charAt(0) == ((Button)findViewById(R.id.button_0)).getText().charAt(0)){
+        if (textView.getText().length() == 1 && textView.getText().charAt(0) == ((Button) findViewById(R.id.button_0)).getText().charAt(0)) {
             textView.setText(button.getText());
             return;
         }
