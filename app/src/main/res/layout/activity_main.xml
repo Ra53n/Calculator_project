@@ -100,28 +100,28 @@
         app:layout_constraintTop_toBottomOf="@id/button_percent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/plus"
+        android:id="@+id/plus_button"
         style="@style/calc_button"
         android:text="@string/plus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_equals"
-        app:layout_constraintTop_toBottomOf="@id/minus" />
+        app:layout_constraintTop_toBottomOf="@id/minus_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/minus"
+        android:id="@+id/minus_button"
         style="@style/calc_button"
         android:text="@string/minus"
-        app:layout_constraintBottom_toTopOf="@id/plus"
+        app:layout_constraintBottom_toTopOf="@id/plus_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_3"
-        app:layout_constraintTop_toBottomOf="@id/devide" />
+        app:layout_constraintTop_toBottomOf="@id/devide_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/devide"
+        android:id="@+id/devide_button"
         style="@style/calc_button"
         android:text="@string/devide"
-        app:layout_constraintBottom_toTopOf="@id/minus"
+        app:layout_constraintBottom_toTopOf="@id/minus_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_6"
         app:layout_constraintTop_toBottomOf="@id/multiply_button" />
@@ -130,7 +130,7 @@
         android:id="@+id/multiply_button"
         style="@style/calc_button"
         android:text="@string/multiply"
-        app:layout_constraintBottom_toTopOf="@id/devide"
+        app:layout_constraintBottom_toTopOf="@id/devide_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_9"
         app:layout_constraintTop_toBottomOf="@id/button_ac" />
@@ -159,7 +159,7 @@
         style="@style/calc_button"
         android:text="@string/button_6"
         app:layout_constraintBottom_toTopOf="@id/button_3"
-        app:layout_constraintEnd_toStartOf="@id/devide"
+        app:layout_constraintEnd_toStartOf="@id/devide_button"
         app:layout_constraintStart_toEndOf="@id/button_5"
         app:layout_constraintTop_toBottomOf="@id/button_9" />
 
@@ -187,7 +187,7 @@
         style="@style/calc_button"
         android:text="@string/button_3"
         app:layout_constraintBottom_toTopOf="@id/button_equals"
-        app:layout_constraintEnd_toStartOf="@id/minus"
+        app:layout_constraintEnd_toStartOf="@id/minus_button"
         app:layout_constraintStart_toEndOf="@id/button_2"
         app:layout_constraintTop_toBottomOf="@id/button_6" />
 
@@ -215,7 +215,7 @@
         style="@style/calc_button"
         android:text="@string/button_equals"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/plus"
+        app:layout_constraintEnd_toStartOf="@id/plus_button"
         app:layout_constraintStart_toEndOf="@id/button_0"
         app:layout_constraintTop_toBottomOf="@id/button_3" />
 

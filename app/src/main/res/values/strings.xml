@@ -7,7 +7,9 @@
     <string name="button_9">9</string>
     <string name="button_8">8</string>
     <string name="button_7">7</string>
+    <string name="degree">^</string>
     <string name="button_degree">x^y</string>
+    <string name="root">√</string>
     <string name="button_root">√</string>
     <string name="button_percent">%</string>
     <string name="button_ac">AC</string>
