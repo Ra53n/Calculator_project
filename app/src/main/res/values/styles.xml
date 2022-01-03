@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="calc_button" parent="Theme.AppCompat.DayNight">
+        <item name="android:layout_width">@dimen/calc_button_layout_width</item>
+        <item name="android:layout_height">@dimen/calc_button_layout_height</item>
+        <item name="android:layout_margin">@dimen/calc_button_layout_margin</item>
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:textSize">@dimen/calc_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="output_result_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/textview_layout_height</item>
+        <item name="android:layout_margin">@dimen/textview_layout_margin</item>
+        <item name="android:background">@color/output_result_textview_color</item>
+        <item name="android:textSize">@dimen/landscape_textview_text_size</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+    <style name="button_zoom">
+        <item name="android:layout_width">@dimen/button_zoom_layout_width</item>
+        <item name="android:layout_height">@dimen/button_zoom_layout_height</item>
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textSize">@dimen/button_zoom_text_size</item>
+        <item name="android:textColor">@color/second_button_color</item>
+
+    </style>
+
+    <style name="landscape_calc_button" parent="Theme.AppCompat.DayNight">
+        <item name="android:layout_width">@dimen/landscape_calc_button_layout_width</item>
+        <item name="android:layout_height">@dimen/landscape_calc_button_layout_height</item>
+        <item name="android:layout_margin">@dimen/landscape_calc_button_layout_margin</item>
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:textSize">@dimen/landscape_calc_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="landscape_output_result_textview">
+        <item name="android:layout_width">@dimen/landscape_textview_layout_width</item>
+        <item name="android:layout_height">@dimen/landscape_textview_layout_height</item>
+        <item name="android:layout_margin">@dimen/landscape_textview_layout_margin</item>
+        <item name="android:background">@color/output_result_textview_color</item>
+        <item name="android:textSize">@dimen/landscape_textview_text_size</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+    <style name="landscape_button_zoom">
+        <item name="android:layout_width">@dimen/landscape_button_zoom_layout_width</item>
+        <item name="android:layout_height">@dimen/landscape_button_zoom_layout_height</item>
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:textSize">@dimen/landscape_button_zoom_text_size</item>
+        <item name="android:textColor">@color/second_button_color</item>
+
+    </style>
+
+    <style name="second_activity_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/square_button</item>
+        <item name="android:textSize">@dimen/second_activity_text_view_text_size</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+
+</resources>
