@@ -27,7 +27,8 @@ public class Solver {
             }
         }
         if (a == 0 && b != 0 && operation != null) return a;
-        if (a != 0 && b == 0 && operation.equals(InputSymbol.DIVIDE)) throw new ArithmeticException();
+        if (a != 0 && b == 0 && operation.equals(InputSymbol.DIVIDE))
+            throw new ArithmeticException();
         if (a != 0 && b == 0 && operation != null) return b;
         return 0;
     }

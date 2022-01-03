@@ -11,7 +11,7 @@ public class CalculatorModel extends Activity {
     private Solver solver;
 
 
-    public void onClickButton(InputSymbol inputSymbol) throws Exception{
+    public void onClickButton(InputSymbol inputSymbol) throws Exception {
         if (inputSymbol == InputSymbol.PLUS || inputSymbol == InputSymbol.DIVIDE || inputSymbol == InputSymbol.DEGREE || inputSymbol == InputSymbol.ROOT || inputSymbol == InputSymbol.MULTIPLY) {
             solver = new Solver();
             solver.setA(Float.parseFloat(convertInputToString(input)));
@@ -22,7 +22,7 @@ public class CalculatorModel extends Activity {
         }
 
         if (inputSymbol == InputSymbol.MINUS) {
-            if(input.size() == 0){
+            if (input.size() == 0) {
                 input.add(inputSymbol);
                 return;
             }
@@ -134,29 +134,29 @@ public class CalculatorModel extends Activity {
     private List<InputSymbol> convertStringToInput(String str) {
         List<InputSymbol> list = new ArrayList<>();
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == InputSymbol.NUM_0.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_0.getSign())
                 list.add(InputSymbol.NUM_0);
-            if(str.charAt(i) == InputSymbol.NUM_1.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_1.getSign())
                 list.add(InputSymbol.NUM_1);
-            if(str.charAt(i) == InputSymbol.NUM_2.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_2.getSign())
                 list.add(InputSymbol.NUM_2);
-            if(str.charAt(i) == InputSymbol.NUM_3.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_3.getSign())
                 list.add(InputSymbol.NUM_3);
-            if(str.charAt(i) == InputSymbol.NUM_4.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_4.getSign())
                 list.add(InputSymbol.NUM_4);
-            if(str.charAt(i) == InputSymbol.NUM_5.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_5.getSign())
                 list.add(InputSymbol.NUM_5);
-            if(str.charAt(i) == InputSymbol.NUM_6.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_6.getSign())
                 list.add(InputSymbol.NUM_6);
-            if(str.charAt(i) == InputSymbol.NUM_7.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_7.getSign())
                 list.add(InputSymbol.NUM_7);
-            if(str.charAt(i) == InputSymbol.NUM_8.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_8.getSign())
                 list.add(InputSymbol.NUM_8);
-            if(str.charAt(i) == InputSymbol.NUM_9.getSign())
+            if (str.charAt(i) == InputSymbol.NUM_9.getSign())
                 list.add(InputSymbol.NUM_9);
-            if(str.charAt(i) == InputSymbol.DOT.getSign())
+            if (str.charAt(i) == InputSymbol.DOT.getSign())
                 list.add(InputSymbol.DOT);
-            if(str.charAt(i) == InputSymbol.MINUS.getSign())
+            if (str.charAt(i) == InputSymbol.MINUS.getSign())
                 list.add(InputSymbol.MINUS);
         }
         return list;

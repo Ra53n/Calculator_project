@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonZero;
     private Button buttonAc;
     private Button buttonDot;
-    private TextView textView;
+    private TextView outputResultTextView;
     private Button buttonZoom;
     private Button buttonPlus;
     private Button buttonMinus;
@@ -71,25 +71,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        buttonOne = findViewById(R.id.button_1);
-        buttonTwo = findViewById(R.id.button_2);
-        buttonThree = findViewById(R.id.button_3);
-        buttonFour = findViewById(R.id.button_4);
-        buttonFive = findViewById(R.id.button_5);
-        buttonSix = findViewById(R.id.button_6);
-        buttonSeven = findViewById(R.id.button_7);
-        buttonEight = findViewById(R.id.button_8);
-        buttonNine = findViewById(R.id.button_9);
-        buttonZero = findViewById(R.id.button_0);
+        buttonOne = findViewById(R.id.button_one);
+        buttonTwo = findViewById(R.id.button_two);
+        buttonThree = findViewById(R.id.button_three);
+        buttonFour = findViewById(R.id.button_four);
+        buttonFive = findViewById(R.id.button_five);
+        buttonSix = findViewById(R.id.button_six);
+        buttonSeven = findViewById(R.id.button_seven);
+        buttonEight = findViewById(R.id.button_eight);
+        buttonNine = findViewById(R.id.button_nine);
+        buttonZero = findViewById(R.id.button_zero);
         buttonDot = findViewById(R.id.button_dot);
         buttonAc = findViewById(R.id.button_ac);
-        textView = findViewById(R.id.output_result_text_view);
+        outputResultTextView = findViewById(R.id.output_result_text_view);
         buttonZoom = findViewById(R.id.button_zoom);
-        buttonPlus = findViewById(R.id.plus_button);
+        buttonPlus = findViewById(R.id.button_plus);
         buttonEquals = findViewById(R.id.button_equals);
-        buttonMinus = findViewById(R.id.minus_button);
-        buttonDevide = findViewById(R.id.devide_button);
-        buttonMultiply = findViewById(R.id.multiply_button);
+        buttonMinus = findViewById(R.id.button_minus);
+        buttonDevide = findViewById(R.id.button_devide);
+        buttonMultiply = findViewById(R.id.button_multiply);
         buttonDegree = findViewById(R.id.button_degree);
         buttonRoot = findViewById(R.id.button_root);
     }
@@ -133,34 +133,34 @@ public class MainActivity extends AppCompatActivity {
         for (InputSymbol symbol : inputSymbolList) {
             switch (symbol) {
                 case NUM_0:
-                    stringBuilder.append(getString(R.string.button_0));
+                    stringBuilder.append(getString(R.string.button_zero));
                     break;
                 case NUM_1:
-                    stringBuilder.append(getString(R.string.button_1));
+                    stringBuilder.append(getString(R.string.button_one));
                     break;
                 case NUM_2:
-                    stringBuilder.append(getString(R.string.button_2));
+                    stringBuilder.append(getString(R.string.button_two));
                     break;
                 case NUM_3:
-                    stringBuilder.append(getString(R.string.button_3));
+                    stringBuilder.append(getString(R.string.button_three));
                     break;
                 case NUM_4:
-                    stringBuilder.append(getString(R.string.button_4));
+                    stringBuilder.append(getString(R.string.button_four));
                     break;
                 case NUM_5:
-                    stringBuilder.append(getString(R.string.button_5));
+                    stringBuilder.append(getString(R.string.button_five));
                     break;
                 case NUM_6:
-                    stringBuilder.append(getString(R.string.button_6));
+                    stringBuilder.append(getString(R.string.button_six));
                     break;
                 case NUM_7:
-                    stringBuilder.append(getString(R.string.button_7));
+                    stringBuilder.append(getString(R.string.button_seven));
                     break;
                 case NUM_8:
-                    stringBuilder.append(getString(R.string.button_8));
+                    stringBuilder.append(getString(R.string.button_eight));
                     break;
                 case NUM_9:
-                    stringBuilder.append(getString(R.string.button_9));
+                    stringBuilder.append(getString(R.string.button_nine));
                     break;
                 case DOT:
                     stringBuilder.append(getString(R.string.button_dot));
@@ -193,16 +193,16 @@ public class MainActivity extends AppCompatActivity {
     private void updateInput(InputSymbol inputSymbol) {
         try {
             calculatorModel.onClickButton(inputSymbol);
-            textView.setText(convertInputToString(calculatorModel.getInput()));
+            outputResultTextView.setText(convertInputToString(calculatorModel.getInput()));
             data.setData(convertInputToString(calculatorModel.getInput()));
-        }catch (Exception e){
-            Toast.makeText(MainActivity.this,"Ошибка",Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(MainActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
         }
     }
 
     private boolean updateInputOnLongClick(InputSymbol inputSymbol) {
         boolean result = calculatorModel.onLongClickButton(inputSymbol);
-        textView.setText(convertInputToString(calculatorModel.getInput()));
+        outputResultTextView.setText(convertInputToString(calculatorModel.getInput()));
         data.setData(convertInputToString(calculatorModel.getInput()));
         return result;
     }
