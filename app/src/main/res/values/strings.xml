@@ -4,21 +4,23 @@
     <string name="devide">/</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
-    <string name="button_9">9</string>
-    <string name="button_8">8</string>
-    <string name="button_7">7</string>
+    <string name="button_nine">9</string>
+    <string name="button_eight">8</string>
+    <string name="button_seven">7</string>
+    <string name="degree">^</string>
     <string name="button_degree">x^y</string>
+    <string name="root">√</string>
     <string name="button_root">√</string>
     <string name="button_percent">%</string>
     <string name="button_ac">AC</string>
     <string name="button_equals">=</string>
-    <string name="button_0">0</string>
+    <string name="button_zero">0</string>
     <string name="button_dot">.</string>
-    <string name="button_3">3</string>
-    <string name="button_2">2</string>
-    <string name="button_1">1</string>
-    <string name="button_6">6</string>
-    <string name="button_5">5</string>
-    <string name="button_4">4</string>
+    <string name="button_three">3</string>
+    <string name="button_two">2</string>
+    <string name="button_one">1</string>
+    <string name="button_six">6</string>
+    <string name="button_five">5</string>
+    <string name="button_four">4</string>
     <string name="button_zoom">ZOOM</string>
 </resources>
